@@ -1,0 +1,15 @@
+#posts
+  each post in posts
+    .post
+      .post-header
+        a(href=post.permalink)= post.title
+      .post-content
+        p= post.content
+      .post-footer
+        - if (user)
+          p Posted #{post.date} | 
+            a(href='#') Edit
+            &nbsp;|
+            a(href='/delete/' + post._id) Delete
+        - else
+          p Posted #{post.date}

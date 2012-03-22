@@ -1,0 +1,27 @@
+doctype 5
+html(lang='en')
+  head
+    title Simple Blog
+    link(rel='stylesheet', href='/css/reset.css')
+    link(rel='stylesheet', href='/css/style.css')
+    style
+  body
+    #wrapper
+      #header
+        #header-menu
+          ul
+            li
+              a(href='/') Start
+            - if (user)  
+              li
+                a(href='/create') Create Post
+              li
+                a(href='/logout') Logout
+            - else
+              li
+                a(href='/login') Login
+        #header-logo
+          h1 Simple Blog
+      #content!= body
+      #footer
+        p Developed by: Oskar Hallén

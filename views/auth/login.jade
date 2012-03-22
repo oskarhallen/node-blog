@@ -1,0 +1,12 @@
+#login-form
+  form(method="post")
+    #login-form-username
+      p Username
+      input(type="text", name="username").login-form-textfield
+    #login-form-password
+      p Password
+      input(type="password", name="password").login-form-textfield
+    #login-form-submit
+      input(type="submit", value="Login").login-form-submit
+    - if (message)
+      p.login-form-message= message

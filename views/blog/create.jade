@@ -1,0 +1,16 @@
+#create-post-form
+    form(method="post")
+        #create-post-form-title
+          p Title
+          input(type="text", name="title").create-post-form-textfield
+        #create-post-form-permalink
+          p Permalink
+          input(type="text", name="permalink").create-post-form-textfield
+        #create-post-form-content
+          p Content
+          textarea(name="content").create-post-form-textarea
+        #create-post-form-submit
+          input(type="submit", value="Create").create-post-form-submit
+        - if (message)
+          #create-post-form-message
+          p= message
